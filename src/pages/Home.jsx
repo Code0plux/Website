@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { supabase } from '../supabaseClient'
 import { motion } from 'framer-motion'
 import { Search, Mail, Phone, MessageCircle, MapPin, Clock, ShoppingBag } from 'lucide-react'
@@ -40,16 +40,16 @@ export default function Home() {
       <nav className="sticky top-0 z-50 backdrop-blur-sm bg-white/90 border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
-            <Link to="/" className="flex items-center gap-3 cursor-pointer">
+            <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
               <img src={logo} alt="HYZI GreenSignal India" className="h-12 w-auto" />
               <h1 className="text-xl md:text-2xl font-bold text-slate-800">HYZI GreenSignal India</h1>
-            </Link>
+            </div>
             <div className="flex justify-center gap-6 md:gap-8 text-sm font-medium">
-              <Link to="/#hero" className="hover:text-amber-600 transition">Home</Link>
-              <Link to="/#products" className="hover:text-amber-600 transition">Products</Link>
-              <Link to="/#about" className="hover:text-amber-600 transition">About</Link>
-              <Link to="/#location" className="hover:text-amber-600 transition">Location</Link>
-              <Link to="/#contact" className="hover:text-amber-600 transition">Contact</Link>
+              <a href="#hero" className="hover:text-amber-600 transition">Home</a>
+              <a href="#products" className="hover:text-amber-600 transition">Products</a>
+              <a href="#about" className="hover:text-amber-600 transition">About</a>
+              <a href="#location" className="hover:text-amber-600 transition">Location</a>
+              <a href="#contact" className="hover:text-amber-600 transition">Contact</a>
             </div>
           </div>
         </div>
