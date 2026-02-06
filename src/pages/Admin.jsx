@@ -13,6 +13,7 @@ function Admin() {
 
   useEffect(() => {
     checkUser()
+    
   }, [])
 
   const checkUser = async () => {
